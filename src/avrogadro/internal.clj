@@ -208,7 +208,7 @@
 (defn mk-nilable-field
   [form]
   {:type ::field
-   :form (or :nil form)
+   :form (mk-or [:nil form])
    :opts {:default nil}})
 
 ;; NAMING SCHEMA FNS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

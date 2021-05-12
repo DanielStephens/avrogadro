@@ -22,8 +22,7 @@
                          :date-of-birth ::date
                          :active :boolean
                          :email (a/field [:nil :string] :default nil)
-                         :address (a/field (a/or :nil ::address)
-                                           :default nil)
+                         :address (a/nilable ::address)
                          :numberwang-winners (a/map-of [:int :long])}))
 
   (is (= {:name "user"
